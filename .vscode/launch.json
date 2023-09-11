@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"command": "call ./node_modules/.bin/astro dev",
+			"name": "Development server",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug CLI",
+			"program": "${workspaceFolder}/bin/cli.js",
+			"skipFiles": ["<node_internals>/**"],
+			"args": [] // Any command-line arguments your CLI expects can go here.
+		}
+	]
+}
