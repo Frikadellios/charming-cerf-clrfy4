@@ -5,34 +5,51 @@
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/zankhq/astro-starter)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/zankhq/astro-starter?devcontainer_path=.devcontainer/blog/devcontainer.json)
 
+starts with
+
+
 ```
 npm create astro-starter@latest
+```
+
+or
+
+```
+pnpm create astro-starter@latest
 ```
 
 ### Features:
 
 - ✅ Tailwind CSS
 - ✅ Alpine js
+- ✅ Typescript
+- ✅ Localization (with astro-i18n-aut)
 - ✅ Dark/light mode
 - ✅ Blog
 - ✅ Discussions (thanks to giscus)
 - ✅ CMS for editing blog post (thanks to decap CMS)
+- ✅ Sitemap (localized)
+- ✅ RSS (localized)
 - ❌ PWA (Follow tutorial below to add it)
 
 ### 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm run build`           | Build your production site to `./dist/`          |
-| `pnpm run preview`         | Preview your build locally, before deploying     |
-| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `pnpm install`         | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
 If you want to switch to npm make sure to remove pnpm-lock.yaml and node_modules folder and then run `npm install`
+
+### How to add PWA
+
+TBD
 
 ### 🚀 Project Structure
 
@@ -85,8 +102,5 @@ If you use netlify it's actually easier, you will need to change in the file `as
 
 ### 👀 Want to learn more?
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Check out [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
 
-### Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).

@@ -5,10 +5,27 @@ import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 import NetlifyCMS from "astro-netlify-cms";
 import { i18n, filterSitemapByDefaultLocale } from "astro-i18n-aut/integration";
-import { DEFAULT_LOCALE, LOCALES, SITE_URL } from "./src/consts";
+import { DEFAULT_LOCALE, LOCALES, SITE_URL, HOSTING_SERVICE, REPO, DEFAULT_BRANCH } from "./src/consts";
 
 const defaultLocale = DEFAULT_LOCALE;
 const locales = LOCALES;
+
+let netlifyCMSBackendConfig = {
+	name: "github",
+	repo: REPO,
+	branch: DEFAULT_BRANCH,
+	base_url: SITE_URL,
+	auth_endpoint: "/api/auth",
+};
+
+if (HOSTING_SERVICE === "netlify") {
+	netlifyCMSBackendConfig = {
+		name: "git-gateway",
+		repo: REPO,
+		branch: DEFAULT_BRANCH,
+		base_url: SITE_URL,
+	};
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,14 +48,12 @@ export default defineConfig({
 		i18n({
 			locales,
 			defaultLocale,
+			exclude: ["pages/api/**/*", "pages/rss.xml.ts", "pages/[locale]/rss.xml.ts"],
 		}),
 		NetlifyCMS({
 			config: {
 				local_backend: true,
-				backend: {
-					name: "git-gateway",
-					branch: "main",
-				},
+				backend: netlifyCMSBackendConfig, // Change here if you don't use neither cloudflare pages nor netlify
 				media_folder: "public/images",
 				public_folder: "/images",
 				i18n: {
