@@ -1,36 +1,38 @@
-# Astro Starter Kit
+<h1 align="center"> Astro Starter Kit</h1>
+
+<br />
 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/zankhq/astro-starter)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/zankhq/astro-starter)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/zankhq/astro-starter?devcontainer_path=.devcontainer/blog/devcontainer.json)
+<p align="center">
+<a href="https://stackblitz.com/github/zankhq/astro-starter">
+	<img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" />
+</a>
+&nbsp;&nbsp;
+<a href="https://codesandbox.io/p/sandbox/github/zankhq/astro-starter">
+	<img src="https://assets.codesandbox.io/github/button-edit-lime.svg" />
+</a>
+&nbsp;&nbsp;
+<a href="https://codespaces.new/zankhq/astro-starter?devcontainer_path=.devcontainer/blog/devcontainer.json">
+	<img src="https://github.com/codespaces/badge.svg" />
+</a>
+</p>
 
-starts with
+<br />
 
-
-```
-npm create astro-starter@latest
-```
-
-or
-
-```
-pnpm create astro-starter@latest
-```
 
 ### Features:
 
-- ✅ Tailwind CSS
-- ✅ Alpine js
-- ✅ Typescript
-- ✅ Localization (with astro-i18n-aut)
-- ✅ Dark/light mode
-- ✅ Blog
-- ✅ Discussions (thanks to giscus)
-- ✅ CMS for editing blog post (thanks to decap CMS)
-- ✅ Sitemap (localized)
-- ✅ RSS (localized)
-- ❌ PWA (Follow tutorial below to add it)
+-   ✅ Tailwind CSS
+-   ✅ Alpine js
+-   ✅ Typescript
+-   ✅ Localization (with astro-i18n-aut)
+-   ✅ Dark/light mode
+-   ✅ Blog
+-   ✅ Discussions (thanks to giscus)
+-   ✅ CMS for editing blog post (thanks to decap CMS)
+-   ✅ Sitemap (localized)
+-   ✅ RSS (localized)
+-   ❌ PWA (Follow tutorial below to add it)
 
 ### 🧞 Commands
 
@@ -95,12 +97,8 @@ If you use cloudflare pages you can follow this guide https://github.com/i40west
 
 In this case your environment variable should look like this
 
-![Cloudflare environment variable image](.github/images/cloudflare-env-var.png)
-
 If you use netlify it's actually easier, you will need to change in the file `astro.config.mjs` NetlifyCMS config `config.backend.name` to git-gateway. (See https://decapcms.org/docs/git-gateway-backend/#git-gateway-with-netlify for more info)
-
 
 ### 👀 Want to learn more?
 
 Check out [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
-
